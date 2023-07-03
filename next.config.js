@@ -3,8 +3,8 @@ const nextConfig = {
   reactStrictMode: true,
   compiler: {
     // styledComponentsを有効化
-    styledComponents: true
-  }
+    styledComponents: true,
+  },
 }
 
 module.exports = nextConfig
