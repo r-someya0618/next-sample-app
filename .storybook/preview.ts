@@ -1,4 +1,8 @@
+import { withThemeFromJSXProvider } from '@storybook/addon-styling'
+import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import type { Preview } from '@storybook/react'
+
+import { theme } from '../src/themes'
 
 const preview: Preview = {
   parameters: {
@@ -13,3 +17,30 @@ const preview: Preview = {
 }
 
 export default preview
+
+const GlobalStyles = createGlobalStyle`
+  html,
+  body,
+  textarea {
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+      Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  *{
+    box-sizing: border-box;
+  }
+  a {
+    text-decoration: none;
+    transition: .25s;
+    color: #000000
+  }
+`
+
+export const decorators = [
+  withThemeFromJSXProvider({
+    themes: { light: theme },
+    Provider: ThemeProvider,
+    GlobalStyles,
+  }),
+]
