@@ -1,4 +1,5 @@
 module.exports = {
+  trailingComma: 'none',
   useTabs: false,
   singleQuote: true,
   jsxSingleQuote: false,

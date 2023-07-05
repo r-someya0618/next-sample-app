@@ -4,18 +4,18 @@ const nextConfig = {
   compiler: (() => {
     let compilerConfig = {
       // styledComponentsを有効化
-      styledComponents: true,
+      styledComponents: true
     }
 
     if (process.env.NODE_ENV === 'production') {
       compilerConfig = {
         ...compilerConfig,
-        reactRemoveProperties: { properties: ['^data-testid$'] },
+        reactRemoveProperties: { properties: ['^data-testid$'] }
       }
     }
 
     return compilerConfig
-  })(),
+  })()
 }
 
 module.exports = nextConfig
