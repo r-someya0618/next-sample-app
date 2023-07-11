@@ -32,6 +32,8 @@ export type BoxProps = {
  */
 const Box = styled.div<BoxProps>`
   ${(props) => toPropValue('color', props.color, props.theme)}
+  ${(props) =>
+    toPropValue('background-color', props.backgroundColor, props.theme)}
 `
 
 export default Box
