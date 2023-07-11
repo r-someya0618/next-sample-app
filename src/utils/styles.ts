@@ -2,7 +2,6 @@
 /* eslint-disable @typescript-eslint/ban-types */
 import { theme } from '@/themes'
 import type { ResponsiveProp, Responsive } from '@/types'
-import { responsiveProperty } from '@mui/material/styles/cssUtils'
 
 // themeの型
 export type AppTheme = typeof theme
