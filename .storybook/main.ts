@@ -9,8 +9,8 @@ const config: StorybookConfig = {
       config.resolve.plugins = [
         ...(config.resolve.plugins || []),
         new TsconfigPathsPlugin({
-          configFile: path.resolve(__dirname, '../tsconfig.json'),
-        }),
+          configFile: path.resolve(__dirname, '../tsconfig.json')
+        })
       ]
     }
     return config
@@ -20,14 +20,14 @@ const config: StorybookConfig = {
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
-    '@storybook/addon-styling',
+    '@storybook/addon-styling'
   ],
   framework: {
     name: '@storybook/nextjs',
-    options: {},
+    options: {}
   },
   docs: {
-    autodocs: 'tag',
-  },
+    autodocs: true
+  }
 }
 export default config

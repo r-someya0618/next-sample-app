@@ -1,15 +1,13 @@
 /* eslint-disable @typescript-eslint/ban-types */
 /**
  * Responsiveプロパティ
- * CSSプロパティの値をブレークポイントごとに設定できる
- * TはCSSプロパティの値の型
  */
 export type ResponsiveProp<T> = {
-  base?: T // デフォルト
-  sm?: T // 640px以上
-  md?: T //768px以上
-  lg?: T //1024px以上
-  xl?: T //1280px以上
+  base?: T
+  sm?: T
+  md?: T
+  lg?: T
+  xl?: T
 }
 export type Responsive<T> = T | ResponsiveProp<T>
 
@@ -28,7 +26,7 @@ type SelfPosition =
 type ContentPosition = 'center' | 'end' | 'flex-end' | 'flex-start' | 'start'
 
 type ContentDistribution =
-  | 'space'
+  | 'space-around'
   | 'space-between'
   | 'space-evenly'
   | 'stretch'
@@ -46,6 +44,7 @@ export type CSSPropertyAlignItems =
   | 'baseline'
   | 'normal'
   | 'stretch'
+  // コードの自動補完
   | (string & {})
 
 export type CSSPropertyAlignContent =
@@ -85,7 +84,6 @@ export type CSSPropertyFlexWrap =
   | 'nowrap'
   | 'wrap'
   | 'wrap-reverse'
-  | (string & {})
 
 export type CSSPropertyFlexDirection =
   | CSSPropertyGlobals
@@ -93,7 +91,6 @@ export type CSSPropertyFlexDirection =
   | 'column-reverse'
   | 'row'
   | 'row-reverse'
-  | (string & {})
 
 export type CSSPropertyJustifySelf =
   | CSSPropertyGlobals
