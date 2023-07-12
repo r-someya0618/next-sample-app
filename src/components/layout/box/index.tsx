@@ -34,6 +34,22 @@ const Box = styled.div<BoxProps>`
   ${(props) => toPropValue('color', props.color, props.theme)}
   ${(props) =>
     toPropValue('background-color', props.backgroundColor, props.theme)}
+  ${(props) => toPropValue('width', props.width, props.theme)}
+  ${(props) => toPropValue('height', props.height, props.theme)}
+  ${(props) => toPropValue('minWidth', props.minWidth, props.theme)}
+  ${(props) => toPropValue('minHeight', props.minHeight, props.theme)}
+  ${(props) => toPropValue('display', props.display, props.theme)}
+  ${(props) => toPropValue('border', props.border, props.theme)}
+  ${(props) => toPropValue('overflow', props.overflow, props.theme)}
+  ${(props) => toPropValue('margin', props.margin, props.theme)}
+  ${(props) => toPropValue('marginTop', props.marginTop, props.theme)}
+  ${(props) => toPropValue('marginRight', props.marginRight, props.theme)}
+  ${(props) => toPropValue('marginBottom', props.marginBottom, props.theme)}
+  ${(props) => toPropValue('marginLeft', props.marginLeft, props.theme)}
+  ${(props) => toPropValue('padding', props.padding, props.theme)}
+  ${(props) => toPropValue('paddingRight', props.paddingRight, props.theme)}
+  ${(props) => toPropValue('paddingBottom', props.paddingBottom, props.theme)}
+  ${(props) => toPropValue('paddingLeft', props.paddingLeft, props.theme)}
 `
 
 export default Box
