@@ -10,6 +10,8 @@ const colors = {
   gray: '#6b6b6b',
   black: '#000000',
   white: '#ffffff',
+  inputText: '#333',
+  placeholder: '#aaa'
 }
 
 export default colors

@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import ImageWithShape from './index'
 
 const meta: Meta<typeof ImageWithShape> = {
+  title: 'Atoms/ShapeImage',
   component: ImageWithShape,
   argTypes: {
     shape: {
