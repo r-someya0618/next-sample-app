@@ -42,7 +42,6 @@ const ScaleImage = ({
       quality="85"
       height={props.height ?? 320}
       width={props.width ?? 320}
-      // alt={props.alt ?? 'Product Image'}
       {...props}
     />
   </ScaleEffectImageContainer>
