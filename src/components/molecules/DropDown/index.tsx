@@ -137,14 +137,17 @@ const Dropdown = (props: DropdownProps) => {
   const [isOpen, setIsOpenValue] = useState(false)
   const [selectedItem, setSelectedItem] = useState(initialItem)
   const dropdownRef = useRef<HTMLDivElement>(null)
-
   const handleDocumentClick = useCallback(
     (e: MouseEvent | TouchEvent) => {
       // 自分自身をクリックした場合は何もしない
       if (dropdownRef.current) {
         const elements = dropdownRef.current.querySelectorAll('*')
-
-        Array.from(elements).map((elem) => elem === e.target)
+        for (let i = 0; i < elements.length; i++) {
+          console.log(i)
+          if (elements[i] == e.target) {
+            return
+          }
+        }
       }
       setIsOpenValue(false)
     },
