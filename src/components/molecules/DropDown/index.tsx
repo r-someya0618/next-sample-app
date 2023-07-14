@@ -137,14 +137,15 @@ const Dropdown = (props: DropdownProps) => {
   const [isOpen, setIsOpenValue] = useState(false)
   const [selectedItem, setSelectedItem] = useState(initialItem)
   const dropdownRef = useRef<HTMLDivElement>(null)
+
   const handleDocumentClick = useCallback(
     (e: MouseEvent | TouchEvent) => {
       // 自分自身をクリックした場合は何もしない
       if (dropdownRef.current) {
         const elements = dropdownRef.current.querySelectorAll('*')
+
         for (let i = 0; i < elements.length; i++) {
-          console.log(i)
-          if (elements[i] == e.target) {
+          if (elements[i] === e.target) {
             return
           }
         }
@@ -156,6 +157,8 @@ const Dropdown = (props: DropdownProps) => {
 
   // マウスダウンした時にドロップダウンを開く
   const handleMouseDown = (e: React.SyntheticEvent) => {
+    console.log('open')
+    console.log(isOpen)
     setIsOpenValue((isOpen) => !isOpen)
     e.stopPropagation()
   }
