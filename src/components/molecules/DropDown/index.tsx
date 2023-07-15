@@ -157,8 +157,6 @@ const Dropdown = (props: DropdownProps) => {
 
   // マウスダウンした時にドロップダウンを開く
   const handleMouseDown = (e: React.SyntheticEvent) => {
-    console.log('open')
-    console.log(isOpen)
     setIsOpenValue((isOpen) => !isOpen)
     e.stopPropagation()
   }
